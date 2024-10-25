@@ -296,6 +296,7 @@ public class Player : MonoBehaviour
 		skill.currentSkillObject = Instantiate(skill.skillPrefabs[skill.skillLevel], transform, false);
 		skill.currentSkillObject.name = skill.skillPrefabs[skill.skillLevel].name;
 		skill.currentSkillObject.transform.localPosition = Vector2.zero;
+		skill.currentSkillObject.transform.rotation = fireDir.rotation;
 		if (skill.isTargetting)
 		{
 			skill.currentSkillObject.transform.SetParent(fireDir);

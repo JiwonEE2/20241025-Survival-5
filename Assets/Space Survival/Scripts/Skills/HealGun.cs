@@ -12,7 +12,7 @@ public class HealGun : LaserGun
 
 	protected override void Fire()
 	{
-		HealProjectile proj = LeanPool.Spawn(healProjectilePrefab, transform.position, Quaternion.identity);
+		HealProjectile proj = LeanPool.Spawn(healProjectilePrefab, transform.position, transform.rotation);
 
 		proj.damage = damage;
 		proj.moveSpeed = projectileSpeed;

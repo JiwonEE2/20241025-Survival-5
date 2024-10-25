@@ -19,7 +19,7 @@ public class ProjectilePool : MonoBehaviour
 	/// 투사체 꺼내오기
 	/// </summary>
 	/// <returns>꺼내온 투사체</returns>
-	public Projectile Pop()
+	protected virtual Projectile Pop()
 	{
 		if (poolList.Count <= 0)  // 꺼낼 객체 없음
 		{
@@ -36,7 +36,7 @@ public class ProjectilePool : MonoBehaviour
 	/// 다 쓴 투사체 도로 집어넣기
 	/// </summary>
 	/// <param name="proj">다 쓴 투사체</param>
-	public void Push(Projectile proj)
+	protected virtual void Push(Projectile proj)
 	{
 		poolList.Add(proj);
 		proj.gameObject.SetActive(false);
@@ -48,7 +48,7 @@ public class ProjectilePool : MonoBehaviour
 	/// </summary>
 	/// <param name="proj">다 쓴 투사체</param>
 	/// <param name="delay">지연 시간</param>
-	public void Push(Projectile proj, float delay)
+	protected virtual void Push(Projectile proj, float delay)
 	{
 		StartCoroutine(PushCoroutine(proj, delay));
 	}
