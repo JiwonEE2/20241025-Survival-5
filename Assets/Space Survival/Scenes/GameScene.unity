@@ -2928,6 +2928,16 @@ MonoBehaviour:
     - {fileID: 7089982967781281397, guid: f0880e110f610a74d85514e215bf26e4, type: 3}
     - {fileID: 7089982967781281397, guid: 4ec7cba718401bc4a99b9d76c5dc012f, type: 3}
     currentSkillObject: {fileID: 0}
+  - skillName: HealGun
+    skillLevel: 0
+    isTargetting: 1
+    skillPrefabs:
+    - {fileID: 3879173538845053495, guid: 029a44008ffb4da478559def01820fff, type: 3}
+    - {fileID: 2341951235244611997, guid: 547405c4d00a9434694ee803f99b8ac6, type: 3}
+    - {fileID: 2341951235244611997, guid: 57ec0f9cce010154c94d583726d9bd8e, type: 3}
+    - {fileID: 2341951235244611997, guid: 2a2e5a0133f6efd4ba6e1a9809c94532, type: 3}
+    - {fileID: 2341951235244611997, guid: e84b9f9a7931b6e49bb8bd549eb1a92d, type: 3}
+    currentSkillObject: {fileID: 0}
 --- !u!58 &1966559059
 CircleCollider2D:
   m_ObjectHideFlags: 0

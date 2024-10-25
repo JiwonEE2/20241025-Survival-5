@@ -11,9 +11,9 @@ public class Projectile : MonoBehaviour
 	public float duration = 3;  //지속시간
 
 	public int pierceCount = 0; // 관통횟수
-	private CircleCollider2D coll;
+	protected CircleCollider2D coll;
 
-	private void Awake()
+	protected virtual void Awake()
 	{
 		coll = GetComponent<CircleCollider2D>();
 		coll.enabled = false;
@@ -26,9 +26,9 @@ public class Projectile : MonoBehaviour
 		//LeanPool.Despawn(this, duration);           // 3초 후에 LeanPool을 통해 풀에 되돌림
 	}
 
-	List<Collider2D> contactedColls = new();  // OverlabCircle 함수를 통해 감지한 적이 있는 콜라이더를 담을 List
+	protected List<Collider2D> contactedColls = new();  // OverlabCircle 함수를 통해 감지한 적이 있는 콜라이더를 담을 List
 
-	private void Update()
+	protected virtual void Update()
 	{
 		Move(Vector2.up);
 		Collider2D contactedColl = Physics2D.OverlapCircle(transform.position, coll.radius);
@@ -61,12 +61,12 @@ public class Projectile : MonoBehaviour
 	//	Gizmos.DrawWireSphere(transform.position, coll.radius);
 	//}
 
-	public void Move(Vector2 dir)
+	protected virtual void Move(Vector2 dir)
 	{
 		transform.Translate(dir * moveSpeed * Time.deltaTime);
 	}
 
-	private void OnTriggerEnter2D(Collider2D other)
+	protected virtual void OnTriggerEnter2D(Collider2D other)
 	{
 		if (other.TryGetComponent<Enemy>(out Enemy enemy))
 		{
@@ -77,7 +77,7 @@ public class Projectile : MonoBehaviour
 		}
 	}
 
-	private void OnDisable()
+	protected virtual void OnDisable()
 	{
 		contactedColls.Clear();
 	}

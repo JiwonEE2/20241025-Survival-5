@@ -7,7 +7,7 @@ public class ProjectilePool : MonoBehaviour
 	public static ProjectilePool pool;
 	public Projectile projPrefab;
 
-	private void Awake()
+	protected virtual void Awake()
 	{
 		pool = this;
 	}
