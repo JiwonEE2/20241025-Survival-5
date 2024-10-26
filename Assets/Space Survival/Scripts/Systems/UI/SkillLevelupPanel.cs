@@ -9,7 +9,6 @@ public class SkillLevelupPanel : MonoBehaviour
 	public RectTransform list;
 	public SkillLevelupButton buttonPrefab;
 
-
 	// 플레이어가 레벨업을 하면 패널 활성화 요청
 	public void LevelUpPanelOpen(List<Skill> skillList, Action<Skill> callback)
 	{

@@ -17,7 +17,6 @@ public class Player : MonoBehaviour
 	// 플레이어 고유 능력치
 	private float maxHp;
 	public float hp = 100f; //체력
-	public float defense = 5f;
 	public float moveSpeed = 5f; //이동속도
 
 	// 스킬 작용 능력치
