@@ -2841,7 +2841,8 @@ MonoBehaviour:
   projSpeed: 5
   projShotInterval: 1
   projCount: 0
-  projSize: 1
+  projScale: 1
+  projInnerInterval: 1
   killCount: 0
   totalKillCount: 0
   tailfireAnimCtrl: {fileID: 114880671}
@@ -2888,6 +2889,39 @@ MonoBehaviour:
     - {fileID: 2341951235244611997, guid: 57ec0f9cce010154c94d583726d9bd8e, type: 3}
     - {fileID: 2341951235244611997, guid: 2a2e5a0133f6efd4ba6e1a9809c94532, type: 3}
     - {fileID: 2341951235244611997, guid: e84b9f9a7931b6e49bb8bd549eb1a92d, type: 3}
+    currentSkillObject: {fileID: 0}
+  - skillName: DamageUp
+    skillLevel: 0
+    isTargetting: 1
+    skillPrefabs:
+    - {fileID: 8942640856405283459, guid: 5410afbd8c044c045b9a97bd34d95a79, type: 3}
+    - {fileID: 2727886249621428713, guid: 4f76c4cad02eacd4a88ab62419621ad5, type: 3}
+    - {fileID: 3419647545843817172, guid: 550d731d15ef9ce49881442a2efba23d, type: 3}
+    - {fileID: 3419647545843817172, guid: 6acd9fb0f192bc9448cc3af0adf74c06, type: 3}
+    - {fileID: 3419647545843817172, guid: d0d57f505e935bf42a18f0dafd6b576e, type: 3}
+    - {fileID: 3419647545843817172, guid: 8e0781c55b5046a45846edd15f5440e0, type: 3}
+    currentSkillObject: {fileID: 0}
+  - skillName: ProjScaleUp
+    skillLevel: 0
+    isTargetting: 1
+    skillPrefabs:
+    - {fileID: 8942640856405283459, guid: 5410afbd8c044c045b9a97bd34d95a79, type: 3}
+    - {fileID: 827620718617520531, guid: 3b30b10951f42ee40a8051f215d77f56, type: 3}
+    - {fileID: 8905418811928537553, guid: 01cb28a8de6e18a48b06d71b8c2eab1d, type: 3}
+    - {fileID: 8905418811928537553, guid: a7b52ee0ddf157849aded183fa407f66, type: 3}
+    - {fileID: 8905418811928537553, guid: 23c31f192eb47b54993cb81639e3c144, type: 3}
+    - {fileID: 8905418811928537553, guid: 2de17539188a7894aa3a4dc6dae3006e, type: 3}
+    currentSkillObject: {fileID: 0}
+  - skillName: ProjSpeedUp
+    skillLevel: 0
+    isTargetting: 1
+    skillPrefabs:
+    - {fileID: 8942640856405283459, guid: 5410afbd8c044c045b9a97bd34d95a79, type: 3}
+    - {fileID: 8120860052693976352, guid: 08cdfdbfed594df458d308dd32411bc3, type: 3}
+    - {fileID: 4389154319351660616, guid: 3916ba9970471b94fb3e95c4bb999802, type: 3}
+    - {fileID: 4389154319351660616, guid: cf4aab1318777f14aaf558ef50210a6b, type: 3}
+    - {fileID: 4389154319351660616, guid: 159b5a2bb03073a49822c81aa84443f6, type: 3}
+    - {fileID: 4389154319351660616, guid: 4c4049694a92115498888154a6b4119a, type: 3}
     currentSkillObject: {fileID: 0}
 --- !u!58 &1966559059
 CircleCollider2D:

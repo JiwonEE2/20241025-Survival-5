@@ -23,7 +23,7 @@ public class LaserGun : MonoBehaviour
 	{
 		damage += GameManager.Instance.player.damage;
 		projectileSpeed += GameManager.Instance.player.projSpeed;
-		projectileScale += GameManager.Instance.player.projSize;
+		projectileScale += GameManager.Instance.player.projScale;
 		shotInterval -= GameManager.Instance.player.projShotInterval;
 		projectileCount += GameManager.Instance.player.projCount;
 		innerInterval -= GameManager.Instance.player.projInnerInterval;

@@ -25,7 +25,7 @@ public class Player : MonoBehaviour
 	public float projSpeed = 5f;
 	public float projShotInterval = 5f;
 	public int projCount = 1;
-	public float projSize = 1f;
+	public float projScale = 1f;
 	public float projInnerInterval = 1f;
 
 	//public Projectile projectilePrefab; //투사체 프리팹
