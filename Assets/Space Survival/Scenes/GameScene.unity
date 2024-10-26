@@ -2008,10 +2008,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96ee1a3b70ea98d4c8d769aeed69e228, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minMaxCount: {x: 2, y: 10}
-  minMaxDist: {x: 3, y: 5}
+  minMaxCount: {x: 1, y: 1}
+  minMaxDist: {x: 10, y: 10}
   enemyPrefab: {fileID: 4430352534475327841, guid: 3ecc6a0b645e5ab408d6e230dfcf2b0d, type: 3}
-  spawnInterval: 3
+  spawnInterval: 5
 --- !u!1 &1550219491
 GameObject:
   m_ObjectHideFlags: 0
@@ -2835,8 +2835,13 @@ MonoBehaviour:
   level: 0
   exp: 0
   hp: 100
-  damage: 5
+  defense: 5
   moveSpeed: 5
+  damage: 5
+  projSpeed: 5
+  projShotInterval: 1
+  projCount: 0
+  projSize: 1
   killCount: 0
   totalKillCount: 0
   tailfireAnimCtrl: {fileID: 114880671}

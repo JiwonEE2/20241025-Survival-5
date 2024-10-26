@@ -11,13 +11,21 @@ public class Player : MonoBehaviour
 	// 현업에서 개발되는 대부분의 게임은 exp값을 빼지 않음
 	// 계속 exp를 누적하는 대신에 현재 exp를 레벨로 환산하면 몇 레벨에 해당하는 지 계산
 
-	private int[] levelupSteps = { 100, 200, 300, 400 };  // 최대 레벨 5까지의 경험치 단계
+	private int[] levelupSteps = { 100, 200, 300, 400, 500, 600, 700, 800, 900, 1000 };  // 최대 레벨 5까지의 경험치 단계
 	private int currentMaxExp;  // 현재 레벨에서 레벨업 하기까지 필요한 경험치 량
 
+	// 플레이어 고유 능력치
 	private float maxHp;
 	public float hp = 100f; //체력
-	public float damage = 5f; //공격력
+	public float defense = 5f;
 	public float moveSpeed = 5f; //이동속도
+
+	// 스킬 작용 능력치
+	public float damage = 5f; //공격력
+	public float projSpeed = 5f;
+	public float projShotInterval = 1f;
+	public int projCount = 0;
+	public float projSize = 1f;
 
 	//public Projectile projectilePrefab; //투사체 프리팹
 
