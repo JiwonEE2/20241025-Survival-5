@@ -23,9 +23,10 @@ public class Player : MonoBehaviour
 	// 스킬 작용 능력치
 	public float damage = 5f; //공격력
 	public float projSpeed = 5f;
-	public float projShotInterval = 1f;
-	public int projCount = 0;
+	public float projShotInterval = 5f;
+	public int projCount = 1;
 	public float projSize = 1f;
+	public float projInnerInterval = 1f;
 
 	//public Projectile projectilePrefab; //투사체 프리팹
 
@@ -120,7 +121,6 @@ public class Player : MonoBehaviour
 				targetDistance = distance;
 				targetEnemy = enemy;
 			}
-
 		}
 
 		Vector2 fireDir = Vector2.zero;

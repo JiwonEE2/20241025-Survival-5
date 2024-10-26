@@ -10,15 +10,24 @@ public class LaserGun : MonoBehaviour
 	public Projectile projectilePrefab; // 투사체 프리팹
 	public ProjectilePool projPool; // Projectile Prefab으로 만들어진 게임 오브젝트를 관리하는 오브젝트풀
 
-	public float damage;                // 데미지
-	public float projectileSpeed;       // 투사체 속도
-	public float projectileScale;       // 투사체 크기
-	public float shotInterval;          // 공격 간격
-
-	public int projectileCount;         // 투사체 개수 1~5
-	public float innerInterval;
+	public float damage = 0;                // 데미지
+	public float projectileSpeed = 0;       // 투사체 속도
+	public float projectileScale = 0;       // 투사체 크기
+	public float shotInterval = 0;          // 공격 간격
+	public int projectileCount = 0;         // 투사체 개수 1~5
+	public float innerInterval = 0;
 	[Tooltip("관통 횟수입니다\n무제한 관통을 원할 경우 0")]
-	public int pierceCount;             // 관통 횟수
+	public int pierceCount = 0;             // 관통 횟수
+
+	protected virtual void Awake()
+	{
+		damage += GameManager.Instance.player.damage;
+		projectileSpeed += GameManager.Instance.player.projSpeed;
+		projectileScale += GameManager.Instance.player.projSize;
+		shotInterval -= GameManager.Instance.player.projShotInterval;
+		projectileCount += GameManager.Instance.player.projCount;
+		innerInterval -= GameManager.Instance.player.projInnerInterval;
+	}
 
 	protected virtual void Start()
 	{
